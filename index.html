@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="container" id="signinBox">
+        <h2> Sign in </h2>
+        <input type="text" placeholder="username" id="checkus"><br>
+        <input type="password" placeholder="Password" id="checkpass"><br>
+        <button onclick="checkuser()"> Login </button>
+        <a href= "home/index.html"> <button> Join as Guest </button></a>
+        <span class="toggle-link" onclick="showSignup()"> Don't have an account? Sign up</span>
+    </div>
+
+    <div class="container" id="signupBox" style="display:none;">
+        <h2> Sign Up</h2>
+        <input type="text" placeholder="Username" id="username"><br>
+        <input type="email" placeholder="Email"><br>
+        <input type="password" placeholder="Password" id="password"><br>
+        <button onclick="register()">Register</button>
+        <span class="toggle-link" onclick="showSignin()">Already have an account? Sign in</span>
+    </div>
+</body>
+</html>

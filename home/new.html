@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Create a new blog </title>
+</head>
+<style>
+body {
+      font-family: "Poppins", Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #667eea, #764ba2, #6dd5ed);
+      background-size: 300% 300%;
+      animation: gradientShift 10s ease infinite;
+    }
+
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+#container {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 40px;               
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  width: 90%;                  
+  max-width: 700px;            
+  min-height: 500px;           
+  text-align: center;
+  color: #fff;
+}
+
+    #container h2 {
+      margin-bottom: 15px;
+      font-size: 24px;
+      font-weight: 600;
+    }
+
+
+    input, textarea {
+      width: 100%;
+      margin: 12px 0;
+      padding: 14px;
+      border: none;
+      border-radius: 10px;
+      font-size: 15px;
+      outline: none;
+      background: rgba(255, 255, 255, 0.8);
+      color: #333;
+      transition: all 0.3s ease;
+    }
+
+    input:focus, textarea:focus {
+      background: #fff;
+      box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+    }
+
+    button {
+      width: 100%;
+      padding: 14px;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      margin-top: 10px;
+      transition: transform 0.2s, box-shadow 0.3s;
+    }
+
+    #post {
+      background: linear-gradient(135deg, #ff7eb3, #ff758c);
+      color: white;
+    }
+
+    #post:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 20px rgba(255, 118, 150, 0.6);
+    }
+
+    a button {
+      background: linear-gradient(135deg, #6dd5ed, #2193b0);
+      color: white;
+    }
+
+    a button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 20px rgba(109, 213, 237, 0.6);
+    }
+</style>
+<body>
+    
+    <div id="container">
+        <input type="text" placeholder="Enter the heading of your blog" id="heading"> <br>
+        <textarea id="content" rows="30" placeholder="Write your blog here..."></textarea><br>
+        <button id="post" onclick="addblog()"> Post blog </button> <br>
+        <a href="index.html"> <button> Go to home page </button> </a>
+    </div>
+</body>
+<script>
+     if(localStorage.getItem("isloggedin") !== "true") {
+     alert("You have to log in for posting the new blog")
+      window.open("../index.html","_self");  
+    }
+</script>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-left">
+        <p>Agrim Goyal</p>
+        <p>NSUT (CSDA'29)  </p>
+        </div>
+        <div id="btn">
+            <h2 id="heading"> TechTalks - Explore Ideas </h2>
+            <div id="navbar">
+                <a href="index.html"> Home </a>
+                <a href="About.html"> About Us </a>
+                <a href = "index.html"> Profile </a>
+                <a href = "new.html"> Create New </a>
+                <button onclick="logout()"> Logout </button></a>
+
+            </div>
+        </div>
+    </header>
+
+        <div class="contact">
+         <a href="#"><img src="instagram.png" style="width: 40px; height: 40px;"></a><br>
+         <a href="#"><img src="facebook.png" style="width: 40px; height: 40px;"></a><br>
+         <a href = "#"><img src="linkedin.png" style="width: 40px; height: 40px;"></a><br>
+        </div>
+
+    <div class="container">
+        <div class="post">
+            <div id="img">
+                <img src="../Images/AI/AI -1.jpg">
+                </div>
+            <h3> AI - Artificial Intelligence</h3>
+            <div class="navbarblog">
+                <div class="views"> 420 views </div>
+                <div class="date"> 10 August 2025 </div>
+            </div>
+            <a href="blogs/ai.html" class="read-more"> Read</a>
+        </div>
+
+        <div class="post">
+            <div id="img"> 
+                <img src="../Images/Web/webd.jpg">
+            </div> 
+            <h3> Web development </h3>
+            <div class="navbarblog">
+                <div class="views"> 380 views </div>
+                <div class="date"> 11 August 2025 </div>
+            </div>
+            <a href="blogs/webd.html" class="read-more">Read</a>
+        </div>
+
+        <div class="post">
+            <div id="img">
+                <img src="../Images/Python/Python-1.png">
+            </div>
+            <h3> Python - Modern Language</h3>
+            <div class="navbarblog">
+                <div class="views"> 420 views </div>
+                <div class="date"> 12 August 2025 </div>
+            </div>
+            <a href="blogs/python.html" class="read-more"> Read</a>
+        </div>
+
+        <div class="post">
+            <div id="img">
+                <img src="../Images/cloudcom/CC - 1.jfif">
+                </div>
+            <h3> Cloud Computing</h3>
+            <div class="navbarblog">
+                <div class="views"> 420 views </div>
+                <div class="date"> 13 August 2025 </div>
+            </div>
+            <a href="blogs/cloudcom.html" class="read-more"> Read</a>
+        </div>
+
+        <div class="post">
+            <div id="img">
+                <img src="../Images/dataScience/Data-1.jpg">
+                </div>
+            <h3> Data Science</h3>
+            <div class="navbarblog">
+                <div class="views"> 420 views </div>
+                <div class="date"> 14 August 2025 </div>
+            </div>
+            <a href="blogs/datas.html" class="read-more"> Read</a>
+        </div>
+
+        <div class="post">
+            <div id="img">
+                <img src="../Images/HTML/HTML-1.jfif">
+                </div>
+            <h3> HTML</h3>
+            <div class="navbarblog">
+                <div class="views"> 420 views </div>
+                <div class="date"> 15 August 2025 </div>
+            </div>
+            <a href="blogs/HTML.html" class="read-more"> Read</a>
+        </div>
+
+        <div class="post">
+            <div id="img">
+             <img src="../Images/Cyber/Cyber-1.jpg">
+           </div>
+         <h3> Cyber Security</h3>
+          <div class="navbarblog">
+             <div class="views"> 420 views </div>
+             <div class="date"> 16 August 2025 </div>
+            </div>
+            <a href="blogs/cyber.html" class="read-more"> Read</a>
+        </div>
+    </div>
+</body>
+<script>
+    function logout() {
+        if(localStorage.getItem("isloggedin") === "false") {
+            alert("You were not logged in.")
+        }else if (localStorage.getItem("isloggedin") === "true"){
+            alert("Now you have logged out")
+            localStorage.setItem("isloggedin", "false");
+        } 
+               
+    }
+</script>
+</html>
