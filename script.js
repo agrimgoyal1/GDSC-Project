@@ -35,7 +35,6 @@ function checkuser() {
         localStorage.setItem("isloggedin" , "true")
     }else if (usernameus === usernamedb && passowrdus === passworddb) {
         window.open("home/index.html","_self")
-        localStorage.setItem("isloggedin" , "true") 
     }else if (usernameus !== usernamedb || usernameus !== username1){
         alert("Incorrect Username")
     }else if (passowrdus !== passworddb || passowrdus !== password1) {
